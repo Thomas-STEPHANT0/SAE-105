@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf : Dompter l'Impossible</title> 
+    <link rel="icon" href="assets/img/wave_favicon.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Surf : L'Homme face aux Éléments</h1>
+        <p class="subtitle">Des défis de l'océan à la vague parfaite artificielle.</p>
+    </header>
+
+    <main id="galerie-container">
+        </main>
+
+    <hr>
+
+    <section id="contribution">
+        <h2>Contribuez à l'Histoire</h2>
+        <p>Le monde du surf ne s'arrête jamais. Proposez un autre moment historique.</p>
+        <p class="note-obligatoire"><small>Les champs marqués d'un astérisque (*) sont obligatoires.</small></p>
+
+        <div class="contribution-layout">
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="userUrl">URL de l'image * :</label>
+                    <input type="url" id="userUrl" placeholder="https://..." required>
+                </div>
+                <div class="form-group">
+                    <label for="userTitle">Titre de l'événement * (max. 80 caractères) :</label>
+                    <input type="text" id="userTitle" placeholder="Ex : Mavericks, la vague glacée" maxlength="80" required>
+                </div>
+                <div class="form-group">
+                    <label for="userDesc">Pourquoi ce moment est-il historique ? * (max. 300 caractères)</label>
+                    <textarea id="userDesc" rows="3" maxlength="300" required></textarea>
+                </div>
+                <button type="submit">Ajouter</button>
+                <div id="msg-feedback" class="feedback hidden"></div>
+            </form>
+
+            <div id="preview-area" class="card hidden">
+                <h3>Prévisualisation</h3>
+                <img src="" alt="Prévisualisation" id="previewImg">
+                <h4 id="previewTitle">Titre</h4>
+                <p id="previewDesc">Description...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Projet SAÉ 1.05 - MMI</p>
+        <a href="#" id="legal-link">Mentions Légales</a>
+    </footer>
+
+    <div id="zoomModal" class="modal">
+        <span class="close-zoom">&times;</span>
+        <img class="modal-content" id="img01" alt="Vue agrandie">
+        <div id="caption"></div>
+    </div>
+
+    <div id="legalModal" class="modal">
+        <div class="modal-content-text">
+            <span class="close-legal">&times;</span>
+            <h2>Mentions Légales</h2>
+
+            <h3>1. Éditeur du site</h3>
+            <p>
+                <strong>Thomas Stephant</strong><br>
+                Étudiant en BUT MMI (Métiers du Multimédia et de l'Internet)<br>
+                Université Gustave Eiffel<br>
+                Contact : <a href="mailto:thomas.stephant@edu.univ-eiffel.fr">thomas.stephant@edu.univ-eiffel.fr</a>
+            </p>
+
+            <h3>2. Hébergement</h3>
+            <p>
+                Ce site est hébergé par la société <strong>o2switch</strong> (SARL).<br>
+                Adresse : Chemin des Pardiaux, 63000 Clermont-Ferrand, France.<br>
+                Téléphone : 04 44 44 60 40
+            </p>
+
+            <h3>3. Propriété intellectuelle et Droits de copie</h3>
+            <p>
+                <strong>Textes et Code :</strong> Ce site est un projet pédagogique réalisé dans le cadre de la SAÉ 1.05. Sauf mention contraire, la structure du site et les textes descriptifs sont la propriété intellectuelle de Thomas Stephant. Toute reproduction est interdite sans autorisation.
+            </p>
+            <p>
+                <strong>Crédits Images :</strong> Les photographies présentées sur ce site ne sont pas libres de droit. Elles appartiennent à leurs auteurs respectifs (Jérôme Brouillet / Olympics, Hugo Silva/ Red Bull, Surf Session) et sont utilisées ici uniquement à titre illustratif dans un cadre scolaire (exception pédagogique). Elles ne peuvent être copiées ou réutilisées à des fins commerciales sans l'accord des auteurs.
+            </p>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
